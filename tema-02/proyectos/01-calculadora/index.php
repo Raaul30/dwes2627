@@ -1,16 +1,18 @@
 <?php
 
 /*
-Proyecto: proyecto 2.1 - calculadora básica
-Descripción: Calculadora de operaciones básicas
+
+ Proyecto: proyecto 2.1 - calculadora básica
+ Descripción: Calculadora de operaciones básicas:
     - suma
     - resta
     - multiplicación
     - división
     - potencia
     - ...
-Alumno: Raúl Bueno
-Fecha: 05/10/2026
+ Alumno: [Nombre del alumno]
+ Fecha:
+ 
 */
 
 // Modelo
