@@ -19,7 +19,7 @@
         <!-- Cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Actividad 2.1.1</span>
+            <span class="fs-6">Actividad 2.1.2</span>
         </header>
 
         <!-- Contenido principal de la aplicación -->

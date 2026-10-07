@@ -1,6 +1,6 @@
 <?php
 /*
-actividad 2.1.1
+actividad 2.1.2
 Descripción:
     - un titulo
     - un párrafo

@@ -19,17 +19,44 @@
         <!-- Cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Actividad 2.1.3</span>
+            <span class="fs-6">Actividad 2.2.1</span>
         </header>
 
         <!-- Contenido principal de la aplicación -->
         <main>
             <div class="content">
-                <h1><?php echo $titulo; ?></h1>
-                <p><?php echo $parrafo; ?></p>
-                <img src="<?php echo $imagen; ?>" alt="Periódico El País" width="400"><br>
-                <a href="<?php echo $enlace; ?>" target="_blank">Visitar El País</a>
-                <p><?php echo $resultado; ?></p>
+                <h1>Conversiones de datos en expresiones</h1>
+
+                <p>
+                    <strong>1. Multiplicar entero con cadena:</strong><br>
+                    Resultado: <?php echo $resultado1; ?><br>
+                    Tipo de dato: <?php echo gettype($resultado1); ?>
+                </p>
+
+                <p>
+                    <strong>2. Sumar entero con cadena:</strong><br>
+                    Resultado: <?php echo $resultado2; ?><br>
+                    Tipo de dato: <?php echo gettype($resultado2); ?>
+                </p>
+
+                <p>
+                    <strong>3. Sumar entero con float:</strong><br>
+                    Resultado: <?php echo $resultado3; ?><br>
+                    Tipo de dato: <?php echo gettype($resultado3); ?>
+                </p>
+
+                <p>
+                    <strong>4. Concatenar entero con cadena:</strong><br>
+                    Resultado: <?php echo $resultado4; ?><br>
+                    Tipo de dato: <?php echo gettype($resultado4); ?>
+                </p>
+
+                <p>
+                    <strong>5. Sumar entero con booleano:</strong><br>
+                    Resultado: <?php echo $resultado5; ?><br>
+                    Tipo de dato: <?php echo gettype($resultado5); ?>
+                </p>
+
             </div>
         </main>
 

@@ -19,17 +19,42 @@
         <!-- Cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Actividad 2.1.3</span>
+            <span class="fs-6">Actividad 2.2.1</span>
         </header>
 
         <!-- Contenido principal de la aplicación -->
         <main>
             <div class="content">
-                <h1><?php echo $titulo; ?></h1>
-                <p><?php echo $parrafo; ?></p>
-                <img src="<?php echo $imagen; ?>" alt="Periódico El País" width="400"><br>
-                <a href="<?php echo $enlace; ?>" target="_blank">Visitar El País</a>
-                <p><?php echo $resultado; ?></p>
+                <h1>Función is_null()</h1>
+
+                <h2>Valores verdaderos</h2>
+
+                <p>
+                    is_null($valor1):<?php echo is_null($valor1) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    is_null($valor2):<?php echo is_null($valor2) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    is_null($valor3):<?php echo is_null($valor3) ? "true" : "false"; ?>
+                </p>
+
+                <h2>Valores falsos</h2>
+
+                <p>
+                    is_null($valor4):<?php echo is_null($valor4) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    is_null($valor5):<?php echo is_null($valor5) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    is_null($valor6):<?php echo is_null($valor6) ? "true" : "false"; ?>
+                </p>
+
             </div>
         </main>
 

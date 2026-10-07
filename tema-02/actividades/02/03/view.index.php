@@ -19,17 +19,42 @@
         <!-- Cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Actividad 2.1.3</span>
+            <span class="fs-6">Actividad 2.2.1</span>
         </header>
 
         <!-- Contenido principal de la aplicación -->
         <main>
             <div class="content">
-                <h1><?php echo $titulo; ?></h1>
-                <p><?php echo $parrafo; ?></p>
-                <img src="<?php echo $imagen; ?>" alt="Periódico El País" width="400"><br>
-                <a href="<?php echo $enlace; ?>" target="_blank">Visitar El País</a>
-                <p><?php echo $resultado; ?></p>
+                <h1>Función isset()</h1>
+
+                <h2>Valores verdaderos</h2>
+
+                <p>
+                    isset($nombre):<?php echo isset($nombre) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    isset($edad):<?php echo isset($edad) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    isset($ciudad):<?php echo isset($ciudad) ? "true" : "false"; ?>
+                </p>
+
+                <h2>Valores falsos</h2>
+
+                <p>
+                    isset($valorNull):<?php echo isset($valorNull) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    isset($variableInexistente):<?php echo isset($variableInexistente) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    isset($otraVariable):<?php echo isset($otraVariable) ? "true" : "false"; ?>
+                </p>
+
             </div>
         </main>
 

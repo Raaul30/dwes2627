@@ -19,17 +19,44 @@
         <!-- Cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Actividad 2.1.3</span>
+            <span class="fs-6">Actividad 2.2.1</span>
         </header>
 
         <!-- Contenido principal de la aplicación -->
         <main>
             <div class="content">
-                <h1><?php echo $titulo; ?></h1>
-                <p><?php echo $parrafo; ?></p>
-                <img src="<?php echo $imagen; ?>" alt="Periódico El País" width="400"><br>
-                <a href="<?php echo $enlace; ?>" target="_blank">Visitar El País</a>
-                <p><?php echo $resultado; ?></p>
+                <div class="content">
+
+                <h1>Función empty()</h1>
+
+                <h2>Valores verdaderos</h2>
+
+                <p>
+                    empty($valor1):<?php echo empty($valor1) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    empty($valor2):<?php echo empty($valor2) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    empty($valor3):<?php echo empty($valor3) ? "true" : "false"; ?>
+                </p>
+
+                <h2>Valores falsos</h2>
+
+                <p>
+                    empty($valor4):<?php echo empty($valor4) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    empty($valor5):<?php echo empty($valor5) ? "true" : "false"; ?>
+                </p>
+
+                <p>
+                    empty($valor6):<?php echo empty($valor6) ? "true" : "false"; ?>
+                </p>
+
             </div>
         </main>
 
