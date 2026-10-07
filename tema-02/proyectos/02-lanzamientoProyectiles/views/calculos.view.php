@@ -40,12 +40,12 @@
                                 Velocidad inicial: 
                             </td>
                             <td>
-                                <?= $velocidad_inicial ?> m/s
+                                <?= number_format($velocidad_inicial, 2, ',', '.') ?> m/s
                             </td>
                         </tr>
                         <tr>
                             <td>Ángulo en radianes</td>
-                            <td><?= $angulo_lanzamiento ?> º</td>
+                            <td><?= number_format($angulo_lanzamiento, 2, ',', '.') ?> º</td>
                         </tr>
                         <tr>
                             <th colspan="2">
@@ -54,27 +54,27 @@
                         </tr>
                         <tr>
                             <td>Ángulo Radianes</td>
-                            <td><?= $angulo_radianes ?> Radianes</td>
+                            <td><?= number_format($angulo_radianes, 2, ',', '.') ?> Radianes</td>
                         </tr>
                         <tr>
                             <td>Velocidad inicial X : </td>
-                            <td><?= $velocidad_inicial_horizontal ?> m/s</td>
+                            <td><?= number_format($velocidad_inicial_horizontal, 2, ',', '.') ?> m/s</td>
                         </tr>
                         <tr>
                             <td>Velocidad inicial Y :</td>
-                            <td><?= $velocidad_inicial_vertical ?> m/s</td>
+                            <td><?= number_format($velocidad_inicial_vertical, 2, ',', '.') ?> m/s</td>
                         </tr>
                         <tr>
                             <td>Alcance máximo del proyectil: </td>
-                            <td><?= $distancia_horizontal ?> m</td>
+                            <td><?= number_format($distancia_horizontal, 2, ',', '.') ?> m</td>
                         </tr>
                         <tr>
                             <td>Tiempo de vuelo del proyectil: </td>
-                            <td><?= $tiempo_vuelo?> s</td>
+                            <td><?= number_format($tiempo_vuelo, 2, ',', '.') ?> s</td>
                         </tr>
                         <tr>
                             <td>Altura máxima del Proyectil :</td>
-                            <td><?= $altura_maxima ?> m</td>
+                            <td><?= number_format($altura_maxima, 2, ',', '.') ?> m</td>
                         </tr>
                     </table>
                     <div class="btn-group" role="group">
