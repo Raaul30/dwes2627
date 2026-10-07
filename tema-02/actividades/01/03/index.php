@@ -1,8 +1,33 @@
 <?php
+/*
+actividad 2.1.1
+Descripción:
+    - un titulo
+    - un párrafo
+    - un enlace
+Alumno: Raúl Bueno
+Fecha: 2026/09/30
+*/
 
-$nombre = "El País";
-$tipo = " es un periódico español.";
+// Modelo
+// include 'model.index.php';
 
-$resultado = $nombre . $tipo;
+// Negociado de la aplicación - php
 
-echo $resultado;
+$titulo = "El periódico El País";
+
+$parrafo =  "El periódico El País es una de las publicaciones más importantes de España.<br>
+Está presente en el día a día de millones de españoles.<br>
+También tiene una fuerte presencia en el ámbito digital.";
+
+$enlace = "http://www.elpais.es";
+
+$imagen = "elpais.jpg";
+
+$parte1 = "El País";
+$parte2 = " es un periódico español.";
+
+$resultado = $parte1 . $parte2;
+
+// Vista de la aplicación - html
+include 'view.index.php';
