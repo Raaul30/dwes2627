@@ -27,28 +27,61 @@
 
             <!-- Formulario de la calculadora -->
             <form>
-                <!-- Campo velocidad inicial -->
-                <div class="mb-3">
-                    <label for="velocidad_inicial" class="form-label">Velocidad Inicial:</label>
-                    <input type="number" class="form-control" step="0.01" value="<?=  $velocidad_inicial ?>" readonly>   
-                </div>
-
-                <!-- Campo ángulo de lanzamiento -->
-                <div class="mb-3">
-                    <label for="angulo_lanzamiento" class="form-label">Ángulo de Lanzamiento:</label>
-                    <input type="number" class="form-control" step="0.01" value="<?=  $angulo_lanzamiento ?>" readonly>   
-                </div>
-
-                <!-- Campo resultado -->
-                <div class="mb-3">
-                    <label for="resultado" class="form-label"><?= $operacion ?></label>
-                    <input type="number" class="form-control" step="0.01" value="<?=  $resultado ?>" readonly>   
-                </div>
-
-                <!-- botones de  acción -->
-                <div class="btn-group" role="group">
-                    <a class="btn btn-warning" href="index.php" role="button">Nuevo Cálculo</a> 
-                </div>
+                <h1>Resultado de la operación</h1>
+                <table class="table table-striped">
+                     <table class="table table-striped">
+                        <tr>
+                            <th colspan="2">
+                                Valores iniciales
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Velocidad inicial: 
+                            </td>
+                            <td>
+                                <?= $velocidad_inicial ?> m/s
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ángulo en radianes</td>
+                            <td><?= $angulo_lanzamiento ?> º</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                Resultados
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Ángulo Radianes</td>
+                            <td><?= $angulo_radianes ?> Radianes</td>
+                        </tr>
+                        <tr>
+                            <td>Velocidad inicial X : </td>
+                            <td><?= $velocidad_inicial_horizontal ?> m/s</td>
+                        </tr>
+                        <tr>
+                            <td>Velocidad inicial Y :</td>
+                            <td><?= $velocidad_inicial_vertical ?> m/s</td>
+                        </tr>
+                        <tr>
+                            <td>Alcance máximo del proyectil: </td>
+                            <td><?= $distancia_horizontal ?> m</td>
+                        </tr>
+                        <tr>
+                            <td>Tiempo de vuelo del proyectil: </td>
+                            <td><?= $tiempo_vuelo?> s</td>
+                        </tr>
+                        <tr>
+                            <td>Altura máxima del Proyectil :</td>
+                            <td><?= $altura_maxima ?> m</td>
+                        </tr>
+                    </table>
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-warning" href="index.php" role="button">
+                            Nuevo Cálculo
+                        </a>
+                    </div>
 
             </form>
 
