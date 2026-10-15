@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <!-- css bootrstrap básico 6.0-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <!--icons bootstrap básico 6.0 -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Capa principal de la aplicación -->
+    <div class="container mt-3">
+
+        <!-- Cabecera de la aplicación -->
+        <header class="bg-primary text-white p-3 mb-3">
+            <i class="bi bi-stack"></i>
+            <span class="fs-6">Título de la aplicación</span>
+        </header>
+
+        <!-- Contenido principal de la aplicación -->
+        <main>
+            <div class="content">
+
+            </div>
+        </main>
+
+        <!-- Pie de página de la aplicación -->
+        <footer class="footer mt-auto py-3 fixed-bottom bg-light">
+            <div class="container">
+                <span class="text-muted">&copy;2026
+                    Raúl Bueno - DWES -2º DAW - Curso 26/27
+                </span>
+            </div>
+        </footer>
+
+        <!-- js bootstrap básico 6.0 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+    </div>
+</body>
+
+</html>
