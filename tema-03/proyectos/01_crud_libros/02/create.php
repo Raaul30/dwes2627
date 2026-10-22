@@ -36,7 +36,7 @@ $precio = floatval($_POST['precio'] ?? 0);
 // Proceso de validación de datos del formulario
 
 // Crear un array asociativo con los datos del libro
-$newbook = [
+$new_book = [
     'id'=> null,
     'titulo' => $titulo,
     'autor' => $autor,
@@ -49,9 +49,10 @@ $newbook = [
 $libros = get_libros();
 
 // Obtener id del nuevo libro creado
-$new_book_id = obtener_id_nuevo_libro($libros);
+$new_book['id'] = obtener_id_nuevo_libro($libros);
 
-
+// Agregar el libro al array de libros
+$libros[] = $new_book;
 
 // Views
 include 'views/index.view.php';

@@ -29,8 +29,8 @@
         <main>
             <div class="content">
 
-                <legend>Formulario nuevo libro</legend>
-                <form>
+                <legend>Formulario Nuevo Libro</legend>
+                <form action="create.php" method="post">
                     <div class="mb-3">
                         <label for="titulo" class="form-label">Título:</label>
                         <input type="text" class="form-control" id="titulo" name="titulo" required>
