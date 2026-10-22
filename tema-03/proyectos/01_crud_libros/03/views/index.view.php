@@ -88,12 +88,12 @@
                             <th scope="col">Editorial</th>
                             <th scope="col">Géneros</th>
                             <th scope="col" class="text-end">Precio</th>
-                            <th>Acciones    </th>
+                            <th scope="col">Acciones</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <?php foreach ($libros as $libro) : ?>
+                        <?php foreach ($libros as $indice => $libro) : ?>
                             <tr>
                                 <th scope="row"><?= $libro['id']; ?></th>
                                 <td><?= $libro['titulo']; ?></td>
@@ -103,13 +103,26 @@
                                 <td class="text-end">
                                     <?= number_format($libro['precio'], 2, ',', '.'); ?> €
                                 </td>
+                                <!-- Botones de acción -->
+                                <td>
+                                <!-- Botón Editar -->
+                                 <!-- Al controlador edit le pasamos por metodo GET el parámetro índice que me va a indicar el índice del libro que voy a editar-->
+                                <a href="edit.php?indice=<?= $indice ?>" class="btn btn-outline-primary btn-sm" title="Editar">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <!-- Botón Borrar -->
+                                <i class="bi bi-trash3"></i>
+                                <!-- Botón Mostar -->
+                                <i class="bi bi-eye "></i>
+                                </td>
+
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
 
                     <tfoot>
                         <tr>
-                            <td colspan="5" class="text-end">Total de libros:</td>
+                            <td colspan="6" class="text-end">Total de libros:</td>
                             <td class="text-end"><?= count($libros); ?></td>
                         </tr>
                     </tfoot>
