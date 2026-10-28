@@ -1,15 +1,15 @@
 <?php
 /*
-index.php
+new.php
 
-Pagina principal del proyecto CRUD de libros.
-Muestra una lista de libros y permite agregar, editar y eliminar libros.
+Permite crear un nuevo libro en la base de datos.
+Muestra una lista de articulos y permite agregar, editar y eliminar articulos.
 
-@package CRUD Libros
+@package CRUD articulos
 @author  Raúl Bueno
 @version 1.0
 
-Tabal libros:
+Tabal articulos:
     - id (INT, PRIMARY KEY, AUTO_INCREMENT)
     - titulo (VARCHAR(255))
     - autor (VARCHAR(255))
@@ -25,7 +25,7 @@ require_once 'libs/functions.php';
 // Models
 
 // Negociado
-$libros = get_libros();
+$articulos = get_articulos();
 
 // Views
-include 'views/index.view.php';
+include 'views/new.view.php';

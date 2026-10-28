@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 6.0</title>
+    <title>Proyecto 3.1 - CRUD Libros</title>
 
     <!-- css bootstrap 6.0 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
@@ -24,36 +24,38 @@
             <span class="fs-6">Proyecto 3.1 - CRUD Libros</span>
         </header>
 
+
         <!-- contenido principal de la aplicación -->
-        
         <main>
             <div class="content">
 
-                <legend>Formulario Nuevo Libro</legend>
-                <form action="create.php" method="post">
+                <legend>Formulario Editar Libro</legend>
+
+                <!-- formulario editar libro -->
+                <form action="update.php?indice=<?= $indice ?>" method="post">
                     <div class="mb-3">
                         <label for="titulo" class="form-label">Título:</label>
-                        <input type="text" class="form-control" id="titulo" name="titulo" required>
+                        <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $libro['titulo'] ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="autor" class="form-label">Autor:</label>
-                        <input type="text" class="form-control" id="autor" name="autor" required>
+                        <input type="text" class="form-control" id="autor" name="autor" value="<?= $libro['autor'] ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="editorial" class="form-label">Editorial:</label>
-                        <input type="text" class="form-control" id="editorial" name="editorial" required>
+                        <input type="text" class="form-control" id="editorial" name="editorial" value="<?= $libro['editorial'] ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="generos" class="form-label">Géneros:</label>
-                        <input type="text" class="form-control" id="generos" name="generos" required>
+                        <input type="text" class="form-control" id="generos" name="generos" value="<?= implode(', ', $libro['generos']) ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio:</label>
-                        <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+                        <input type="number" step="0.01" class="form-control" id="precio" name="precio" value="<?= $libro['precio'] ?>" required>
                     </div>
                     <a class="btn-solid theme-danger" href="index.php" role="button">Cancelar</a>
                     <button type="reset" class="btn-solid theme-warning">Borrar</button>
-                    <button type="submit" class="btn-solid theme-primary">Crear libro</button>
+                    <button type="submit" class="btn-solid theme-primary">Actualizar Libro</button>
                 </form>
             </div>
 

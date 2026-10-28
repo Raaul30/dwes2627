@@ -21,14 +21,14 @@
         <!-- cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Proyecto 3.1 - CRUD Libros</span>
+            <span class="fs-6">Proyecto 3.1 - CRUD Articulos</span>
         </header>
 
         <!-- Menú principal de la aplicación -->
 
         <nav class="navbar md:navbar-expand bg-1">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Libros</a>
+                <a class="navbar-brand" href="#">articulos</a>
                 <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" aria-hidden="true"></span>
                 </button>
@@ -77,30 +77,30 @@
         <main>
             <div class="content">
 
-                <legend>Listado de libros</legend>
+                <legend>Listado de articulos</legend>
 
                 <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Título</th>
-                            <th scope="col">Autor</th>
-                            <th scope="col">Editorial</th>
-                            <th scope="col">Géneros</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Unidades</th>
+                            <th scope="col">Categorías</th>
                             <th scope="col" class="text-end">Precio</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <?php foreach ($libros as $libro) : ?>
+                        <?php foreach ($articulos as $articulo) : ?>
                             <tr>
-                                <th scope="row"><?= $libro['id']; ?></th>
-                                <td><?= $libro['titulo']; ?></td>
-                                <td><?= $libro['autor']; ?></td>
-                                <td><?= $libro['editorial']; ?></td>
-                                <td><?= implode(', ', $libro['generos']); ?></td>
+                                <th scope="row"><?= $articulo['id']; ?></th>
+                                <td><?= $articulo['descripcion']; ?></td>
+                                <td><?= $articulo['modelo']; ?></td>
+                                <td><?= $articulo['unidades']; ?></td>
+                                <td><?= implode(', ', $articulo['categorias']); ?></td>
                                 <td class="text-end">
-                                    <?= number_format($libro['precio'], 2, ',', '.'); ?> €
+                                    <?= number_format($articulo['precio'], 2, ',', '.'); ?> €
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -108,8 +108,8 @@
 
                     <tfoot>
                         <tr>
-                            <td colspan="5" class="text-end">Total de libros:</td>
-                            <td class="text-end"><?= count($libros); ?></td>
+                            <td colspan="5" class="text-end">Total de articulos:</td>
+                            <td class="text-end"><?= count($articulos); ?></td>
                         </tr>
                     </tfoot>
                 </table>
