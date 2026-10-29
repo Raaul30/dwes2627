@@ -3,18 +3,18 @@
 update.php
 
 Permite actualizar un libro a partir de los datos enviados en el formulario.
-Muestra una lista de libros y permite agregar, editar y eliminar libros.
+Muestra una lista de articulos y permite agregar, editar y eliminar articulos.
 
-@package CRUD Libros
+@package CRUD articulos
 @author  Raúl Bueno
 @version 1.0
 
-Tabla libros:
+Tabla articulos:
     - id (INT, PRIMARY KEY, AUTO_INCREMENT)
-    - titulo (VARCHAR(255))
-    - autor (VARCHAR(255))
-    - editorial (VARCHAR(255))
-    - generos
+    - descripcion (VARCHAR(255))
+    - modelo (VARCHAR(255))
+    - unidades (VARCHAR(255))
+    - categorias
     - precio
 
 */
@@ -29,28 +29,28 @@ require_once 'libs/functions.php';
 // Si en el form de edit.view.php pusiste un input hidden o va por GET, lo cogemos:
 $indice = $_POST['indice'] ?? $_GET['indice'] ?? null;
 
-// Cargar el array de libros
-$libros = get_libros();
+// Cargar el array de articulos
+$articulos = get_articulos();
 
 // Cargo los datos del formulario
-$titulo = htmlspecialchars($_POST['titulo'] ?? '');
-$autor = htmlspecialchars($_POST['autor'] ?? '');
-$editorial = htmlspecialchars($_POST['editorial'] ?? '');
-$generos = htmlspecialchars($_POST['generos'] ?? '');
+$descripcion = htmlspecialchars($_POST['descripcion'] ?? '');
+$modelo = htmlspecialchars($_POST['modelo'] ?? '');
+$unidades = htmlspecialchars($_POST['unidades'] ?? '');
+$categorias = htmlspecialchars($_POST['categorias'] ?? '');
 $precio = floatval($_POST['precio'] ?? 0);
 
 // Crear array asociativo con los datos del libro editado manteniendo el id original
-$edit_book = [
-    'id' => $libros[$indice]['id'],
-    'titulo' => $titulo,
-    'autor' => $autor,
-    'editorial' => $editorial,
-    'generos' => explode(', ', $generos),
+$edit_articulo = [
+    'id' => $articulos[$indice]['id'],
+    'descripcion' => $descripcion,
+    'modelo' => $modelo,
+    'unidades' => $unidades,
+    'categorias' => explode(', ', $categorias),
     'precio' => $precio
 ];
 
-// Actualizar el libro en el array de libros
-$libros[$indice] = $edit_book;
+// Actualizar el libro en el array de articulos
+$articulos[$indice] = $edit_articulo;
 
 // Views
 require_once 'views/index.view.php';

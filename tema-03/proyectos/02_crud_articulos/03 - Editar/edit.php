@@ -3,13 +3,13 @@
 edit.php
 
 Permite editar un  libro a partir de los datos enviados en el formulario.
-Muestra una lista de libros y permite agregar, editar y eliminar libros.
+Muestra una lista de articulos y permite agregar, editar y eliminar articulos.
 
-@package CRUD Libros
+@package CRUD articulos
 @author  Raúl Bueno
 @version 1.0
 
-Tabal libros:
+Tabal articulos:
     - id (INT, PRIMARY KEY, AUTO_INCREMENT)
     - titulo (VARCHAR(255))
     - autor (VARCHAR(255))
@@ -32,10 +32,10 @@ $indice = htmlspecialchars($_GET['indice'] ?? null);
 
 // Validar el índice recibido
 
-// Cargar el array de libros
-$libros = get_libros();
+// Cargar el array de articulos
+$articulos = get_articulos();
 
 // Obtenemos el libro a editar
-$libro = $libros[$indice];
+$articulo = $articulos[$indice];
 
 require_once 'views/edit.view.php';

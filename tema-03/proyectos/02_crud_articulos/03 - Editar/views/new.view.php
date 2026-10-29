@@ -21,7 +21,7 @@
         <!-- cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Proyecto 3.1 - CRUD Libros</span>
+            <span class="fs-6">Proyecto 3.2 - CRUD Articulos</span>
         </header>
 
         <!-- contenido principal de la aplicación -->
@@ -32,20 +32,20 @@
                 <legend>Formulario Nuevo Libro</legend>
                 <form action="create.php" method="post">
                     <div class="mb-3">
-                        <label for="titulo" class="form-label">Título:</label>
-                        <input type="text" class="form-control" id="titulo" name="titulo" required>
+                        <label for="descripcion" class="form-label">Descripción:</label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" required>
                     </div>
                     <div class="mb-3">
-                        <label for="autor" class="form-label">Autor:</label>
-                        <input type="text" class="form-control" id="autor" name="autor" required>
+                        <label for="modelo" class="form-label">Modelo:</label>
+                        <input type="text" class="form-control" id="modelo" name="modelo" required>
                     </div>
                     <div class="mb-3">
-                        <label for="editorial" class="form-label">Editorial:</label>
-                        <input type="text" class="form-control" id="editorial" name="editorial" required>
+                        <label for="unidades" class="form-label">Unidades:</label>
+                        <input type="text" class="form-control" id="unidades" name="unidades" required>
                     </div>
                     <div class="mb-3">
-                        <label for="generos" class="form-label">Géneros:</label>
-                        <input type="text" class="form-control" id="generos" name="generos" required>
+                        <label for="categorias" class="form-label">Categorías:</label>
+                        <input type="text" class="form-control" id="categorias" name="categorias" required>
                     </div>
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio:</label>
@@ -53,7 +53,7 @@
                     </div>
                     <a class="btn-solid theme-danger" href="index.php" role="button">Cancelar</a>
                     <button type="reset" class="btn-solid theme-warning">Borrar</button>
-                    <button type="submit" class="btn-solid theme-primary">Crear libro</button>
+                    <button type="submit" class="btn-solid theme-primary">Crear Articulo</button>
                 </form>
             </div>
 

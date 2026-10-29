@@ -21,7 +21,7 @@
         <!-- cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Proyecto 3.1 - CRUD Articulos</span>
+            <span class="fs-6">Proyecto 3.2 - CRUD Articulos</span>
         </header>
 
         <!-- contenido principal de la aplicación -->

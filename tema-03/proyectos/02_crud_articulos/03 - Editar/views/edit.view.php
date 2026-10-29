@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Proyecto 3.1 - CRUD Libros</title>
+    <title>Proyecto 3.1 - CRUD articulos</title>
 
     <!-- css bootstrap 6.0 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
@@ -21,7 +21,7 @@
         <!-- cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Proyecto 3.1 - CRUD Libros</span>
+            <span class="fs-6">Proyecto 3.2 - CRUD Articulos</span>
         </header>
 
 
@@ -29,33 +29,37 @@
         <main>
             <div class="content">
 
-                <legend>Formulario Editar Libro</legend>
+                <legend>Formulario Editar articulo</legend>
 
-                <!-- formulario editar libro -->
+                <!-- formulario editar articulo -->
                 <form action="update.php?indice=<?= $indice ?>" method="post">
                     <div class="mb-3">
-                        <label for="titulo" class="form-label">Título:</label>
-                        <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $libro['titulo'] ?>" required>
+                        <label for="id" class="form-label">Título:</label>
+                        <input type="text" class="form-control" id="id" name="id" value="<?= $articulo['id'] ?>" required>
                     </div>
                     <div class="mb-3">
-                        <label for="autor" class="form-label">Autor:</label>
-                        <input type="text" class="form-control" id="autor" name="autor" value="<?= $libro['autor'] ?>" required>
+                        <label for="descripcion" class="form-label">descripcion:</label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" value="<?= $articulo['descripcion'] ?>" required>
                     </div>
                     <div class="mb-3">
-                        <label for="editorial" class="form-label">Editorial:</label>
-                        <input type="text" class="form-control" id="editorial" name="editorial" value="<?= $libro['editorial'] ?>" required>
+                        <label for="modelo" class="form-label">modelo:</label>
+                        <input type="text" class="form-control" id="modelo" name="modelo" value="<?= $articulo['modelo'] ?>" required>
                     </div>
                     <div class="mb-3">
-                        <label for="generos" class="form-label">Géneros:</label>
-                        <input type="text" class="form-control" id="generos" name="generos" value="<?= implode(', ', $libro['generos']) ?>" required>
+                        <label for="unidades" class="form-label">unidades:</label>
+                        <input type="text" class="form-control" id="unidades" name="unidades" value="<?= $articulo['unidades'] ?>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="categorias" class="form-label">Géneros:</label>
+                        <input type="text" class="form-control" id="categorias" name="categorias" value="<?= implode(', ', $articulo['categorias']) ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio:</label>
-                        <input type="number" step="0.01" class="form-control" id="precio" name="precio" value="<?= $libro['precio'] ?>" required>
+                        <input type="number" step="0.01" class="form-control" id="precio" name="precio" value="<?= $articulo['precio'] ?>" required>
                     </div>
                     <a class="btn-solid theme-danger" href="index.php" role="button">Cancelar</a>
                     <button type="reset" class="btn-solid theme-warning">Borrar</button>
-                    <button type="submit" class="btn-solid theme-primary">Actualizar Libro</button>
+                    <button type="submit" class="btn-solid theme-primary">Actualizar articulo</button>
                 </form>
             </div>
 

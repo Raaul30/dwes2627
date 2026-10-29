@@ -21,7 +21,7 @@
         <!-- cabecera de la aplicación -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Proyecto 3.1 - CRUD Libros</span>
+            <span class="fs-6">Proyecto 3.2 - CRUD Libros</span>
         </header>
 
         <!-- Menú principal de la aplicación -->
@@ -83,38 +83,36 @@
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Título</th>
-                            <th scope="col">Autor</th>
-                            <th scope="col">Editorial</th>
-                            <th scope="col">Géneros</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Unidades</th>
+                            <th scope="col">Categorías</th>
                             <th scope="col" class="text-end">Precio</th>
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <?php foreach ($libros as $indice => $libro) : ?>
+                        <?php foreach ($articulos as $indice => $articulo) : ?>
                             <tr>
-                                <th scope="row"><?= $libro['id']; ?></th>
-                                <td><?= $libro['titulo']; ?></td>
-                                <td><?= $libro['autor']; ?></td>
-                                <td><?= $libro['editorial']; ?></td>
-                                <td><?= implode(', ', $libro['generos']); ?></td>
+                                <th scope="row"><?= $articulo['id']; ?></th>
+                                <td><?= $articulo['descripcion']; ?></td>
+                                <td><?= $articulo['modelo']; ?></td>
+                                <td class="text-center"><?= $articulo['unidades']; ?></td>
+                                <td><?= implode(', ', $articulo['categorias']); ?></td>
                                 <td class="text-end">
-                                    <?= number_format($libro['precio'], 2, ',', '.'); ?> €
+                                    <?= number_format($articulo['precio'], 2, ',', '.'); ?> €
                                 </td>
+
                                 <!-- Botones de acción -->
                                 <td>
-                                <!-- Botón Editar -->
-                                 <!-- Al controlador edit le pasamos por metodo GET el parámetro índice que me va a indicar el índice del libro que voy a editar-->
-                                <a href="edit.php?indice=<?= $indice ?>" class="btn btn-outline-primary btn-sm" title="Editar">
-                                    <i class="bi bi-pencil"></i>
-                                </a>
-                                <!-- Botón Borrar -->
-                                <i class="bi bi-trash3"></i>
-                                <!-- Botón Mostar -->
-                                <i class="bi bi-eye "></i>
-                                </td>
+                                    <!-- Botón Borrar -->
+                                    <i class="bi bi-trash3"></i>
+                                    <!-- Botón Editar -->
+                                    <!-- Al controlador edit le pasamos por metodo GET el parámetro índice que me va a indicar el índice del libro que voy a editar-->
+                                    <a href="edit.php?indice=<?= $indice ?>" class="btn btn-outline-primary btn-sm" title="Editar">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
 
                             </tr>
                         <?php endforeach; ?>
@@ -122,8 +120,8 @@
 
                     <tfoot>
                         <tr>
-                            <td colspan="6" class="text-end">Total de libros:</td>
-                            <td class="text-end"><?= count($libros); ?></td>
+                            <td colspan="6" class="text-end">Total de articulos:</td>
+                            <td class="text-end"><?= count($articulos); ?></td>
                         </tr>
                     </tfoot>
                 </table>

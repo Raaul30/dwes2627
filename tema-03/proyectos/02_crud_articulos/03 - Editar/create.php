@@ -2,24 +2,10 @@
 /*
 create.php
 
-Permite crear un nuevo libro a partir de los datos enviados en el formulario.
-Muestra una lista de libros y permite agregar, editar y eliminar libros.
-
-@package CRUD Libros
-@author  Raúl Bueno
-@version 1.0
-
-Tabal libros:
-    - id (INT, PRIMARY KEY, AUTO_INCREMENT)
-    - titulo (VARCHAR(255))
-    - autor (VARCHAR(255))
-    - editorial (VARCHAR(255))
-    - generos
-    - precio
-
+Permite crear un nuevo artículo a partir de los datos enviados en el formulario.
 */
 
-// Caragr librerías
+// Cargar librerías
 require_once 'libs/functions.php';
 
 // Models
@@ -27,32 +13,32 @@ require_once 'libs/functions.php';
 // Negociado
 
 // Extraer los datos del formulario
-$titulo = htmlspecialchars($_POST['titulo'] ?? '');
-$autor = htmlspecialchars($_POST['autor'] ?? '');
-$editorial = htmlspecialchars($_POST['editorial'] ?? '');
-$generos = htmlspecialchars($_POST['generos'] ?? '');
+$descripcion = htmlspecialchars($_POST['descripcion'] ?? '');
+$modelo = htmlspecialchars($_POST['modelo'] ?? '');
+$unidades = htmlspecialchars($_POST['unidades'] ?? '');
+$categorias = htmlspecialchars($_POST['categorias'] ?? '');
 $precio = floatval($_POST['precio'] ?? 0);
 
 // Proceso de validación de datos del formulario
 
-// Crear un array asociativo con los datos del libro
-$new_book = [
-    'id'=> null,
-    'titulo' => $titulo,
-    'autor' => $autor,
-    'editorial' => $editorial,
-    'generos' => explode(', ', $generos),
-    'precio' => $precio
+// Crear un array asociativo con los datos del artículo (usando $new_articulo)
+$new_articulo = [
+    'id'          => null,
+    'descripcion' => $descripcion,
+    'modelo'      => $modelo,
+    'unidades'    => $unidades,
+    'categorias'  => explode(', ', $categorias),
+    'precio'      => $precio
 ];
 
-// Obtener el array libros existente
-$libros = get_libros();
+// Obtener el array articulos existente
+$articulos = get_articulos();
 
-// Obtener id del nuevo libro creado
-$new_book['id'] = obtener_id_nuevo_libro($libros);
+// Obtener id del nuevo articulo creado y asignárselo
+$new_articulo['id'] = obtener_id_nuevo_articulo($articulos);
 
-// Agregar el libro al array de libros
-$libros[] = $new_book;
+// Agregar el artículo al array de articulos
+$articulos[] = $new_articulo;
 
 // Views
 include 'views/index.view.php';
