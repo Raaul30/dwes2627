@@ -4,7 +4,7 @@
     fichero: Articulos.php
     @autor: Raúl Bueno García
     @fecha: 
-    @proyecto: proyecto41
+    @proyecto: proyecto42
 */
 
 /**
@@ -23,7 +23,7 @@
  * 
  * @métodos:
  *  - constructor: parámetros opcionales
- *  - getters y setters
+ * 
  */
 
 Class Articulo {
@@ -54,6 +54,7 @@ Class Articulo {
         $this->unidades = $unidades;
         $this->precio = $precio;
     }
+
 }
 
 

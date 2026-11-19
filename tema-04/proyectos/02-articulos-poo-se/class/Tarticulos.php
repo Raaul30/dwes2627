@@ -8,6 +8,10 @@
         - tarticulos []
     Métodos: 
         - constructor
+        - getters
+        - setters
+        - getMarcas()
+        - getCategorias()
 
 */
 
@@ -21,6 +25,7 @@ class Tarticulos
     {
         $this->tarticulos = [];
     }
+
 
     /*
         Método getMarcas()

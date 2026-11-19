@@ -2,10 +2,9 @@
 <html lang="es">
 
 <head>
-    <!-- Cargar la cabecera de la aplicación -->
-     <?php require_once __DIR__ . '/views/layouts/head.layout.php'; ?>
+    <!-- Cargar la cabecera de la apliación -->
+    <?php require_once __DIR__ . '/layouts/head.layout.php'; ?>
     <title>Proyecto 4.2 - CRUD Artículos - POO SIN Encapsulación</title>
-
 </head>
 
 <body>
@@ -13,33 +12,10 @@
     <div class="container mt-3">
 
         <!-- cabecera de la aplicación -->
-     <?php require_once __DIR__ . '/views/partials/header.partial.php'; ?>
+        <?php require_once __DIR__ . '/partials/header.partial.php'; ?>
 
         <!-- Menú principal de la aplicación -->
-        <nav class="navbar md:navbar-expand bg-1">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.php">Artículos</a>
-                <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
-                </button>
-                <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
-                    <div class="drawer-header">
-                        <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
-                    </div>
-                    <div class="drawer-body mb-2 md:mb-0">
-                        <ul class="nav navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php">Listado</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="new.php">Nuevo</a>
-                            </li>
-                        </ul>
-                    </div>
-                </dialog>
-            </div>
-        </nav>
+        <?php require_once __DIR__ . '/partials/menu.partial.php'; ?>
 
         <!-- contenido principal de la aplicación -->
         <main>
@@ -90,8 +66,8 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td class="text-end">Total</td>
-                            <td  colspan="7" class="text-end"><?= count($articulos) ?></td>
+                            <td>Total</td>
+                            <td colspan="7"><?= count($articulos) ?></td>
                         </tr>
                     </tfoot>
                 </table>
@@ -100,10 +76,10 @@
         </main>
 
         <!-- pie de página de la aplicación -->
-        <?php require_once __DIR__ . '/views/partials/footer.partial.php'; ?>
+        <?php require_once __DIR__ . '/partials/footer.partial.php'; ?>
 
-        <!-- js boostrap básico 6.0 -->
-        <?php require_once __DIR__ . '/views/layouts/js_bootstrap.php'; ?>
+        <!-- js bootstrap básico 6.0 -->
+        <?php require_once __DIR__ . '/layouts/js_bootstrap.php'; ?>
 
     </div>
 </body>

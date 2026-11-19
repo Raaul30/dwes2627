@@ -20,7 +20,7 @@ $precio = $_POST['precio']?? null;
 // Validación no se  hace
 
 // Generar id del nuevo artículo
-$id = 6; // En un caso real, se generaría automáticamente
+$id = 7; // En un caso real, se generaría automáticamente
 
 // Creamos un nuevo artículo de la clase Articulo
 $articulo = new Articulo(

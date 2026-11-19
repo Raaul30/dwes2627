@@ -50,7 +50,7 @@ $indice = $tabla_articulos->getIndiceById($id);
 $tabla_articulos->update($indice, $articulo_actualizado);
 
 // 7. Cargar la tabla de artículos actualizada
-$articulos = $tabla_articulos->getTarticulos();
+$articulos = $tabla_articulos->tarticulos;
 
 // 8. Cargar la lista de marcas y categorías para la vista principal
 $marcas = Tarticulos::getMarcas();
