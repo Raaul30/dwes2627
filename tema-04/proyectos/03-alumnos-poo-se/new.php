@@ -1,7 +1,7 @@
 <?php
 
-require_once 'class/Alumno.php';
-require_once 'class/TablaAlumnos.php';
+require_once __DIR__ .'/class/Alumnos.php';
+require_once __DIR__ .'/class/TablaAlumnos.php';
 
 $cursos = TablaAlumnos::getCursos();
 
